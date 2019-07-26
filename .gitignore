@@ -1,0 +1,9 @@
+# Ignore custom theme build artifacts
+node_modules
+css
+package-lock.json
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride

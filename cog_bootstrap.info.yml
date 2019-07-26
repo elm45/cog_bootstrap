@@ -1,0 +1,21 @@
+name: Cog Bootstrap
+type: theme
+base theme: classy
+description: Base starter files for a Bootstrap 4.0 installation of Cog.
+package: Custom
+core: 8.x
+libraries:
+  # - cog_bootstrap/global
+  - cog_bootstrap/bootstrap
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  featured: 'Featured'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: 'Footer'

@@ -1,0 +1,34 @@
+# Main theme library.
+global:
+  css:
+    base:
+      css/base/elements.min.css: {}
+    layout:
+      css/layouts/layout-main.css: {}
+    component:
+      css/components/branding/branding.min.css: {}
+      css/components/breadcrumb/breadcrumb.min.css: {}
+      css/components/form/form.min.css: {}
+      css/components/header/header.min.css: {}
+      css/components/menu/menu.min.css: {}
+      css/components/messages/messages.min.css: {}
+      css/components/table/table.min.css: {}
+      css/components/tabs/tabs.min.css: {}
+      css/components/buttons/buttons.min.css: {}
+    theme:
+      css/theme/print.min.css: { media: print }
+bootstrap:
+  css:
+    base:
+      node_modules/bootstrap/dist/css/bootstrap-reboot.min.css: { minified: true }
+      node_modules/bootstrap/dist/css/bootstrap-grid.min.css: { minified: true }
+    theme:
+      css/custom-bootstrap/bootstrap-custom-main.min.css: { minified: true }
+  js:
+    node_modules/popper.js/dist/umd/popper.min.js: { minified: true }
+    node_modules/bootstrap/dist/js/bootstrap.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+

@@ -1,0 +1,64 @@
+/**
+ * Creating custom meter styles because Bootstrap does not have meter styles.
+ * We mimmick bootsrap styling by using the progress bar variables.
+ **/
+
+meter {
+  /* Reset the default appearance */
+  appearance: none;
+  /* For Firefox */
+  background: none;
+  box-shadow: none;
+  /* Style like bootstrap */
+  overflow: hidden;
+  height: $progress-height;
+  font-size: $progress-font-size;
+  background-color: $progress-bg;
+  @include border-radius($progress-border-radius);
+  @include box-shadow($progress-box-shadow);
+}
+
+// Below we keep the meter values separate in case we want to use different color variables.
+// e.g. optimum: blue, suboptimum: yellow, even-less-good: red
+
+/* Meter bar WebKit overrides */
+meter::-webkit-meter-bar {
+  background: $progress-bg;
+  box-shadow: none;
+  border-radius: none;
+}
+
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value {
+  border-radius: none;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: $progress-bar-bg;
+}
+
+meter::-webkit-meter-suboptimum-value {
+  background: $progress-bar-bg;
+}
+
+meter::-webkit-meter-even-less-good-value  {
+  background: $progress-bar-bg;
+}
+
+/* Meter bar Mozilla overrides */
+meter::-moz-meter-bar {
+  border-radius: 0;
+}
+
+meter:-moz-meter-optimum::-moz-meter-bar {
+  background: $progress-bar-bg;
+}
+
+meter:-moz-meter-sub-optimum::-moz-meter-bar {
+  background: $progress-bar-bg;
+}
+
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+  background: $progress-bar-bg;
+}

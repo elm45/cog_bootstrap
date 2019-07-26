@@ -1,0 +1,32 @@
+/**
+ * Custom build of bootstrap styles.
+ * See: http://getbootstrap.com/docs/4.1/getting-started/theming/
+ * Note: You should not need to edit this file. Add overrides to _bootsrap-custom-variables.scss
+ **/
+
+// Imports our custom variables.
+@import "bootstrap-custom-variables";
+
+// Imports boostrap styles.
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Import custom components.
+@import "custom_bootstrap_meter.scss";
+
+/**
+ * These values will not show up in content, but can be
+ * queried by JavaScript to know which breakpoint is active.
+ */
+body:before {
+  content: "";
+  display: none;
+}
+
+// Breakpoint loop.
+@each $key, $value in $grid-breakpoints {
+  @media (min-width: $value ){
+    body:before{
+      content: '#{$key}';
+    }
+  }
+}

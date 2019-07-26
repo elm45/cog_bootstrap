@@ -1,0 +1,8 @@
+# Schema for the configuration files of the Cog Bootstrap theme.
+cog_bootstrap.settings:
+  type: theme_settings
+  label: 'Cog Bootstrap settings'
+  mapping:
+    font_size:
+      type: integer
+      label: Font size
